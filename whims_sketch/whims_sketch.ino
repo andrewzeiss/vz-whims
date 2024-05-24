@@ -3,6 +3,10 @@
 #define vibePin1 4
 #define vibePin1 5
 #define vibePin1 6
+#include <ArduinoBLE.h>
+
+char cmd;
+string deviceName = "";
 
 int vibePins[5] = { 2, 3, 4, 5, 6 };
 int i, j, p, pos;
@@ -13,69 +17,111 @@ unsigned long runTime = 15000; //5000
 unsigned long vibeRunTime = runTime / sizeof(vibePins);
 unsigned long delayTime = runTime / 10, halfDelay = delayTime / 2;
 
-
 void setup() {
   Serial.begin(9600);
-  Serial.println("Vibration Discrete Test");
-  for (p = 0; p <= num_of_vibes - 1; p++) {
-    pinMode(vibePins[j], OUTPUT);
+  while (!Serial);
+
+  //begin initialization
+  if(!BLE.begin()) {
+    Serial.println("Bluetooth failed to start");
+
+    while (1);
   }
+
+  Serial.println("BLE Central scan");
+
+  // Serial.println("Vibration Discrete Test");
+  // for (p = 0; p <= num_of_vibes - 1; p++) {
+  //   pinMode(vibePins[j], OUTPUT);
+  // }
+
 }
 
 void loop() {
- // Start of testing
-  GetApproval();
-  HalfCycle(); // Beginning and Ending Stimuli
-  GetApproval();
 
- // Three complete cycles
-  while (readyToContinueToNext == false) {
-    for (int z = 1; z <= 3; z++) {
-      SingleCycle();
-      Serial.println("out");
-      continueToNext();
+  //check for peripherals
+  BLEDevice peripheral = BLE.scanForName("Venu Sq 2");
+
+  if (peripheral) {
+    //discovered a peripheral
+    Serial.println("Discovered a peripheral");
+    Serial.println("-------");
+
+    //print address
+    Serial.print("Address: ");
+    Serial.println(peripheral.address());
+
+    //print the local name if present
+    if (peripheral.hasLocalName()){
+      Serial.print("Local Name: ");
+      Serial.println(peripheral.localName());
     }
-  }
 
-  // // End to Random Test
-  Serial.println("Test 100 to random");
-  GetApproval();
-  EndToRand();
-
-  // Fifty to Random Test
-  Serial.println("Test 50 to Random");
-  GetApproval();
-  FiftyToRand();
-}
-
-
-void GetApproval() {
-  approved = false;
-  Serial.println("Press (y) when ready to move on");
-  while (approved == false) {
-    if (Serial.readString() == "y") {
-      approved = true;
-    }
-  }
-}
-
-void continueToNext() {  // Function to move on or repeat a trial
-  questionAnswered = false, readyToContinueToNext = false;
-  Serial.println("Press (n) to repeat and (y) to continue");
-  while (questionAnswered == false) {
-    if (Serial.available() > 0) {
-      if (Serial.readString() == "y") {
-        readyToContinueToNext = true;
-        questionAnswered = true;
-      } else {
-        readyToContinueToNext = false;
-        questionAnswered = true;
+    //print the advertised service UUIDs, if present
+    if (peripheral.hasAdvertisedServiceUuid()) {
+      Serial.print("Service UUIDs: ");
+      for (int i = 0; i < peripheral.advertisedServiceUuidCount()); i++ {
+        Serial.print(peripheral.advertisedServiceUuid(i));
       }
     }
+
+    Serial.println();
+
+    BLE.stopScan
+
+    BLE.scanForName("Venu Sq 2");
   }
 }
 
-void SingleCycle() {
+
+void monitorHR(peripheral) {
+
+  // Conenct to the peripheral
+  Serial.println("Connecting ...");
+
+  if (peripheral.connect()) {
+    Serial.println("Connected!");
+  } else {
+    Serial.println("Failed to connect :(");
+  }
+
+  //need the service Uuid and characteristic for heart rate broadcasting, then put it here
+
+  // Discover the service
+  if (peripheral.discoverService(serviceUuid)) {
+    Serial.println("Service discovered!");
+
+    // Discover the characteristic
+    targetCharacteristic = peripheral.characteristic(serviceUuid, characteristicUuid);
+    if (targetCharacteristic) {
+      Serial.println("Characteristic discovered!");
+
+      // Read the value of the characteristic
+      if (targetCharacteristic.canRead()) {
+        byte value[20];  // Adjust size as needed
+        int length = targetCharacteristic.readValue(value, sizeof(value));
+
+        Serial.print("Characteristic value: "); //set this to some variable
+        for (int i = 0; i < length; i++) {
+          Serial.print((char)value[i]);
+        }
+        Serial.println();
+      } else {
+        Serial.println("Characteristic is not readable!");
+      }
+    } else {
+      Serial.println("Characteristic not found!");
+    }
+  } else {
+    Serial.println("Service not found!");
+  }
+
+  //if some variable representing hr is over some certain threshhold, call singleCycle
+
+}
+
+
+void singleCycle() {
   Serial.println(num_of_vibes);
   for (i = 0; i <= num_of_vibes - 1; i++) {
     Serial.println(i + 1);
@@ -103,134 +149,31 @@ void SingleCycle() {
   }
 }
 
-void HalfCycle() {
-  Serial.println(num_of_vibes);
-  for (i = 0; i <= num_of_vibes - 1; i++) {
-    Serial.println(i + 1);
-    if (i == 0) {
-      digitalWrite(vibePins[i], HIGH);
-      delay(delayTime);
-    } else {
-      digitalWrite(vibePins[i - 1], LOW);
-      digitalWrite(vibePins[i], HIGH);
-      delay(delayTime);
-    }
-  }
-  for (p = 0; p <= num_of_vibes - 1; p++) {
-    digitalWrite(vibePins[p], LOW);
-  }
-  GetApproval();
-  for (i = num_of_vibes - 1; i >= 0; i--) {
-    Serial.println(i + 1);
-    digitalWrite(vibePins[i + 1], LOW);
-    digitalWrite(vibePins[i], HIGH);
-    delay(delayTime);
-  }
-  for (p = 0; p <= num_of_vibes - 1; p++) {
-    digitalWrite(vibePins[p], LOW);
-  }
-}
+// void halfCycle() {
+//   Serial.println(num_of_vibes);
+//   for (i = 0; i <= num_of_vibes - 1; i++) {
+//     Serial.println(i + 1);
+//     if (i == 0) {
+//       digitalWrite(vibePins[i], HIGH);
+//       delay(delayTime);
+//     } else {
+//       digitalWrite(vibePins[i - 1], LOW);
+//       digitalWrite(vibePins[i], HIGH);
+//       delay(delayTime);
+//     }
+//   }
+//   for (p = 0; p <= num_of_vibes - 1; p++) {
+//     digitalWrite(vibePins[p], LOW);
+//   }
+//   GetApproval();
+//   for (i = num_of_vibes - 1; i >= 0; i--) {
+//     Serial.println(i + 1);
+//     digitalWrite(vibePins[i + 1], LOW);
+//     digitalWrite(vibePins[i], HIGH);
+//     delay(delayTime);
+//   }
+//   for (p = 0; p <= num_of_vibes - 1; p++) {
+//     digitalWrite(vibePins[p], LOW);
+//   }
+// }
 
-void EndToRand() {  //  From 0 to 100 then 100 to a random quartile 0,25,50...
-  int testy[4] = { 1, 3, 2, 4};
-  int testSize1 = sizeof(testy) / sizeof(testy[0]);
-  Serial.println(testSize1);
-  for (j = 0; j < testSize1; j++) {
-    Serial.print("Going to vibe #");
-    Serial.println(testy[j]);
-    readyToContinueToNext = false;
-    while (readyToContinueToNext == false) {
-      for (i = 0; i <= num_of_vibes - 1; i++) {
-        Serial.println(i + 1);
-        if (i == 0) {
-          digitalWrite(vibePins[i], HIGH);
-          delay(delayTime);
-        } else {
-          digitalWrite(vibePins[i - 1], LOW);
-          digitalWrite(vibePins[i], HIGH);
-          delay(delayTime);
-        }
-      }
-      for (p = 0; p <= num_of_vibes - 1; p++) {
-        digitalWrite(vibePins[p], LOW);
-      }
-      delay(delayTime);
-      for (i = num_of_vibes; i >= testy[j]; i--) { //num_of_vibes - 1
-        Serial.println(i + 1);
-        digitalWrite(vibePins[i], LOW);  // +1?
-        digitalWrite(vibePins[i - 1], HIGH);
-        delay(delayTime);
-      }
-      GetApproval();
-      for (p = 0; p <= num_of_vibes - 1; p++) {
-        digitalWrite(vibePins[p], LOW);
-      }
-      continueToNext();
-    }
-  }
-}
-
-void FiftyToRand() {  // Will move to fifty first for the location of fifty before starting. Can repeat
-  int testy2[4] = { 1, 2, 4, 5};
-  int testSize2 = sizeof(testy2) / sizeof(testy2[0]);
-  Serial.println(testSize2);
-  readyToContinueToNext = false;
-  while (readyToContinueToNext == false) {
-    for (i = 0; i <= (num_of_vibes / 2); i++) {
-      Serial.println(i + 1);
-      if (i == 0) {
-        digitalWrite(vibePins[i], HIGH);
-        delay(delayTime);
-      } else {
-        digitalWrite(vibePins[i - 1], LOW);
-        digitalWrite(vibePins[i], HIGH);
-        delay(delayTime);
-      }
-    }
-    GetApproval();
-    for (p = 0; p <= num_of_vibes - 1; p++) {
-      digitalWrite(vibePins[p], LOW);
-    }
-    continueToNext();
-  }
-  for (j = 0; j < testSize2; j++) {
-    Serial.print("Going to vibe #");
-    Serial.println(testy2[j]);
-    readyToContinueToNext = false;
-    if (testy2[j] < 3) {
-      while (readyToContinueToNext == false) {
-        for (i = num_of_vibes / 2; i >= testy2[j] - 1; i--) {
-          Serial.println(i + 1);
-          digitalWrite(vibePins[i + 1], LOW);
-          digitalWrite(vibePins[i], HIGH);
-          delay(delayTime);
-        }
-        GetApproval();
-        for (p = 0; p <= num_of_vibes - 1; p++) {
-          digitalWrite(vibePins[p], LOW);
-        }
-        continueToNext();
-      }
-    } else {
-      readyToContinueToNext = false;
-      while (readyToContinueToNext == false) {
-        for (i = num_of_vibes / 2; i <= testy2[j] - 1; i++) {
-          Serial.println(i + 1);
-          if (i == 0) {
-            digitalWrite(vibePins[i], HIGH);
-            delay(delayTime);
-          } else {
-            digitalWrite(vibePins[i - 1], LOW);
-            digitalWrite(vibePins[i], HIGH);
-            delay(delayTime);
-          }
-        }
-        GetApproval();
-        for (p = 0; p <= num_of_vibes - 1; p++) {
-          digitalWrite(vibePins[p], LOW);
-        }
-        continueToNext();
-      }
-    }
-  }
-}
