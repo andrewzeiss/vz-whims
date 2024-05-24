@@ -67,7 +67,9 @@ void loop() {
 
     Serial.println();
 
-    BLE.stopScan
+    BLE.stopScan();
+
+    monitorHR(peripheral);
 
     BLE.scanForName("Venu Sq 2");
   }
