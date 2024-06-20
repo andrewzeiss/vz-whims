@@ -1,3 +1,3 @@
 # vz-whims
 
-Placeholder Text
+Repo for developement on St. Louis University CHROME lab WHIMS project
