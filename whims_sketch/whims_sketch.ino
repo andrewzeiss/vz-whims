@@ -12,24 +12,14 @@ void setup() {
   Serial.println("BLE Central - Scanning for peripherals...");
   BLE.scan();
 
-  BLECharacteristic heartRate = peripheral.characteristic("2A37");
-
-  if (heartRate){
-    if (heartRate.canSubscribe()) {
-      heartRate.subscribe(notificationCallback);
-      Serial.println("Subscribed to Heart Rate readout");
-    } else {
-      Serial.println("Can not subscribe");
-    }
-  } else {
-    Serial.println("Heart Rate Characteristic not found");
-  }
-
 }
 
 void loop() {
   // Check if a peripheral has been discovered
   BLEDevice peripheral = BLE.available();
+
+
+  BLECharacteristic heartRate = peripheral.characteristic("2A37");
 
   if (peripheral) {
     // Print the discovered peripheral address
@@ -52,27 +42,23 @@ void loop() {
         BLE.scan(); // Resume scanning if connection fails
         return;
       }
-
-      // Discover peripheral services and characteristics
-      if (peripheral.discoverAttributes()) {
-        Serial.println("Attributes discovered");
-        // Iterate through services and characteristics
-        for (int i = 0; i < peripheral.serviceCount(); i++) {
-          BLEService service = peripheral.service(i);
-          Serial.print("Service UUID: ");
-          Serial.println(service.uuid());
-
-          for (int j = 0; j < service.characteristicCount(); j++) {
-            BLECharacteristic characteristic = service.characteristic(j);
-            Serial.print("  Characteristic UUID: ");
-            Serial.println(characteristic.uuid());
-          }
-        }
-      } else {
-        Serial.println("Attribute discovery failed");
+     
+      Serial.println("Subscribing to heart rate monitor... ");
+      if (!heartRate) {
+        Serial.println("no heart rate characteristic found");
         peripheral.disconnect();
+        return;
+      } else if (!heartRate.canSubscribe()) {
+        Serial.println("Heart rate is not subscribable");
+        peripheral.disconnect();
+        return;
+      } else if (!heartRate.subscribe()) {
+        Serial.println("Subscription failed");
+        peripheral.disconnect();
+        return;
       }
 
+      notificationCallback(heartRate);
 
       // Resume scanning
       BLE.scan();
