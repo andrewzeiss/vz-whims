@@ -1,5 +1,8 @@
 #include <ArduinoBLE.h>
 
+byte oldHR = 0;
+BLECharacteristic heartRateMeasurement;
+
 void setup() {
   Serial.begin(9600);
   while (!Serial);
@@ -19,7 +22,10 @@ void loop() {
   BLEDevice peripheral = BLE.available();
 
 
-  BLECharacteristic heartRate = peripheral.characteristic("2A37");
+  BLECharacteristic heartRate = peripheral.characteristic("00002A37-0000-1000-8000-00805f9b34fb");
+
+
+  //"6a4e310-667B-11e3-949a-0800200c9a66"
 
   if (peripheral) {
     // Print the discovered peripheral address
@@ -40,9 +46,42 @@ void loop() {
       } else {
         Serial.println("Failed to connect");
         BLE.scan(); // Resume scanning if connection fails
-        return;
       }
-     
+      if (peripheral.discoverAttributes()) {
+        Serial.println("Attributes Discovered");
+/*
+        int serviceCount = peripheral.serviceCount();
+        for (int i = 0; i < serviceCount; i++) {
+          BLEService service = peripheral.service(i);
+          Serial.print("Service UUID: ");
+          Serial.println(service.uuid());
+
+          int characteristicCount = service.characteristicCount();
+          for (int j = 0; j < characteristicCount; j++) {
+            BLECharacteristic characteristic = service.characteristic(j);
+            Serial.print("  Characteristic UUID: ");
+            Serial.println(characteristic);
+            Serial.print("  Properties: ");
+            Serial.println(characteristic.properties());
+          }
+        }
+      } else {
+        Serial.println("Attribute discovery failed");
+*/
+
+        BLEService heartRateService = peripheral.service("180D");
+        if (heartRateService) {
+          heartRateMeasurement = heartRateService.characteristic("2A37");
+          if (heartRateMeasurement) {
+            heartRateMeasurement.subscribe();
+            Serial.println("Subscribed to heart Rate measurement!!!");
+          } else {
+            Serial.println("Heart Rate measurement subscription failed...");
+          }
+        }
+      }
+
+/*
       Serial.println("Subscribing to heart rate monitor... ");
       if (!heartRate) {
         Serial.println("no heart rate characteristic found");
@@ -57,21 +96,28 @@ void loop() {
         peripheral.disconnect();
         return;
       }
+*/
 
-      notificationCallback(heartRate);
+      while (peripheral.connected()) {
 
+        if (heartRateMeasurement.valueUpdated()) {
+
+          byte heartRateData[2];
+          heartRateMeasurement.readValue(heartRateData, 2);
+
+          byte currentHR = heartRateData[1];
+
+          if (oldHR != currentHR) {
+            oldHR = currentHR;
+            Serial.print("Heart Rate: ");
+            Serial.println(currentHR);
+          }
+        }
+      }
       // Resume scanning
       BLE.scan();
     }
   }
-}
-
-void notificationCallback(BLECharacteristic& characteristic) {
-  Serial.print("Received Heart Rate Measurement Notification: ");
-
-  String value = characteristic.value();
-
-  Serial.println(value);
 }
 
 
