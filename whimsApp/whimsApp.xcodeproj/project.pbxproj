@@ -17,6 +17,62 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2D08FE3A2C2F1C70001E9A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F435027A1A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+		2D08FE3C2C2F1C70001E9A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
+			remoteInfo = OAuthSwiftMacOS;
+		};
+		2D08FE3E2C2F1C70001E9A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
+			remoteInfo = OAuthSwiftTVOS;
+		};
+		2D08FE402C2F1C70001E9A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C40890C01C11B37000E3146A;
+			remoteInfo = OAuthSwiftWatchOS;
+		};
+		2D08FE422C2F1C70001E9A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F451E3C5195B8CD80051434C;
+			remoteInfo = OAuthSwiftDemo;
+		};
+		2D08FE442C2F1C70001E9A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
+			remoteInfo = OAuthSwiftMacOSDemo;
+		};
+		2D08FE462C2F1C70001E9A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
+			remoteInfo = OAuthSwiftTests;
+		};
+		2D08FE482C2F1D20001E9A2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F43502791A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
 		2DA2C3BF2C2F0E430052D616 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2DA2C3A62C2F0E400052D616 /* Project object */;
@@ -34,6 +90,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = ../../../../githubRepos/OAuthSwift/OAuthSwift.xcodeproj; sourceTree = "<group>"; };
+		2D08FE4A2C2F1D93001E9A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2DA2C3AE2C2F0E410052D616 /* whimsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whimsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA2C3B12C2F0E410052D616 /* whimsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whimsAppApp.swift; sourceTree = "<group>"; };
 		2DA2C3B32C2F0E410052D616 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,9 +129,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D08FE312C2F1C70001E9A2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D08FE3B2C2F1C70001E9A2F /* OAuthSwift.framework */,
+				2D08FE3D2C2F1C70001E9A2F /* OAuthSwift.framework */,
+				2D08FE3F2C2F1C70001E9A2F /* OAuthSwift.framework */,
+				2D08FE412C2F1C70001E9A2F /* OAuthSwift.framework */,
+				2D08FE432C2F1C70001E9A2F /* OAuthSwiftDemo.app */,
+				2D08FE452C2F1C70001E9A2F /* OAuthSwiftMacOSDemo.app */,
+				2D08FE472C2F1C70001E9A2F /* OAuthSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2DA2C3A52C2F0E400052D616 = {
 			isa = PBXGroup;
 			children = (
+				2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */,
 				2DA2C3B02C2F0E410052D616 /* whimsApp */,
 				2DA2C3C12C2F0E430052D616 /* whimsAppTests */,
 				2DA2C3CB2C2F0E430052D616 /* whimsAppUITests */,
@@ -94,6 +167,7 @@
 		2DA2C3B02C2F0E410052D616 /* whimsApp */ = {
 			isa = PBXGroup;
 			children = (
+				2D08FE4A2C2F1D93001E9A2F /* Info.plist */,
 				2DA2C3B12C2F0E410052D616 /* whimsAppApp.swift */,
 				2DA2C3B32C2F0E410052D616 /* ContentView.swift */,
 				2DA2C3B52C2F0E430052D616 /* Assets.xcassets */,
@@ -141,6 +215,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2D08FE492C2F1D20001E9A2F /* PBXTargetDependency */,
 			);
 			name = whimsApp;
 			productName = whimsApp;
@@ -217,6 +292,12 @@
 			mainGroup = 2DA2C3A52C2F0E400052D616;
 			productRefGroup = 2DA2C3AF2C2F0E410052D616 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2D08FE312C2F1C70001E9A2F /* Products */;
+					ProjectRef = 2D08FE302C2F1C70001E9A2F /* OAuthSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2DA2C3AD2C2F0E410052D616 /* whimsApp */,
@@ -225,6 +306,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2D08FE3B2C2F1C70001E9A2F /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 2D08FE3A2C2F1C70001E9A2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D08FE3D2C2F1C70001E9A2F /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 2D08FE3C2C2F1C70001E9A2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D08FE3F2C2F1C70001E9A2F /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 2D08FE3E2C2F1C70001E9A2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D08FE412C2F1C70001E9A2F /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 2D08FE402C2F1C70001E9A2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D08FE432C2F1C70001E9A2F /* OAuthSwiftDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftDemo.app;
+			remoteRef = 2D08FE422C2F1C70001E9A2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D08FE452C2F1C70001E9A2F /* OAuthSwiftMacOSDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftMacOSDemo.app;
+			remoteRef = 2D08FE442C2F1C70001E9A2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D08FE472C2F1C70001E9A2F /* OAuthSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuthSwiftTests.xctest;
+			remoteRef = 2D08FE462C2F1C70001E9A2F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2DA2C3AC2C2F0E410052D616 /* Resources */ = {
@@ -282,6 +415,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2D08FE492C2F1D20001E9A2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthSwift;
+			targetProxy = 2D08FE482C2F1D20001E9A2F /* PBXContainerItemProxy */;
+		};
 		2DA2C3C02C2F0E430052D616 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2DA2C3AD2C2F0E410052D616 /* whimsApp */;
@@ -424,6 +562,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"whimsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = whimsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,6 +591,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"whimsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = whimsApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
