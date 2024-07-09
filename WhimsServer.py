@@ -1,67 +1,49 @@
 import asyncio
 import tkinter as tk
-from tkinter import messagebox
+import datetime
 from bleak import BleakScanner, BleakClient
+from PIL import Image, ImageTk
 
-client = None
+haptic_uuid = '0000ffe1-0000-1000-8000-00805f9b34fb'
+
+haptic_on = bytearray([0x01])
 
 
-async def scan_devices():
+def get_timestamp():
+    return datetime.datetime.now().strftime("[%H:%M:%S] ")
+
+
+async def run():
+    status_box.insert(tk.END, get_timestamp() + "Looking for Arduino...")
+    found = False
     devices = await BleakScanner.discover()
-    return devices
+    for d in devices:
+        if d.name is None:
+            continue
+        elif "Arduino" in d.name:
+            status_box.insert(tk.END, get_timestamp() + "Arduino found!")
+            found = True
+            async with BleakClient(d.address) as client:
+                status_box.insert(tk.END, get_timestamp() + "Connected to Arduino!")
+                await client.write_gatt_char(haptic_uuid, haptic_on)
 
 
-# This function is called when the connect button is clicked and handles the connection to the
-# selected device from the listbox
-async def connect_to_device(address):
-    global client
-    if client is not None:
-        await client.disconnect()
-    client = BleakClient(address)
-    try:
-        await client.connect()
-        return True
-    except Exception as e:
-        print(f"Failed to connect to device: {e}")
-        return False
-
-
-# This function is called when the scan button is clicked and handles the scanning of devices
-def handle_scan():
-    devices_listbox.delete(0, tk.END)
-    devices = asyncio.run(scan_devices())
-    for device in devices:
-        devices_listbox.insert(tk.END, f"{device.name} - {device.address}")
-
-
-# This function is called when the connect button is clicked and handles the connection to the
-# selected device from the listbox
-def handle_connect():
-    selected = devices_listbox.curselection()
-    if not selected:
-        messagebox.showerror("Error", "No device selected")
-        return
-
-    device_info = devices_listbox.get(selected[0])
-    address = device_info.split(" - ")[1]
-    connected = asyncio.run(connect_to_device(address))
-    if connected:
-        messagebox.showinfo("Success", "Connected to device")
+def handle_run():
+    loop = asyncio.get_event_loop()
+    if loop.is_running():
+        loop.create_task(run())
     else:
-        messagebox.showerror("Error", "Failed to connect to device")
+        loop.run_until_complete(run())
 
 
 # Creating the GUI
 root = tk.Tk()
-root.title("Whims Server")
+root.title("WHIMS Server")
 
-devices_listbox = tk.Listbox(root, width=50, height=10)
-devices_listbox.pack(pady=10)
+status_box = tk.Listbox(root, width=50, height=10)
+status_box.pack(pady=10)
 
-scan_button = tk.Button(root, text="Scan", command=handle_scan)
-scan_button.pack(pady=10)
-
-connect_button = tk.Button(root, text="Connect", command=handle_connect)
-connect_button.pack(pady=10)
+start_button = tk.Button(root, text="Start", command=handle_run)
+start_button.pack(pady=10)
 
 root.mainloop()
