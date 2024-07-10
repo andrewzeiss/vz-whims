@@ -4,6 +4,7 @@ import datetime
 from bleak import BleakScanner, BleakClient
 from PIL import Image, ImageTk
 
+
 haptic_uuid = '0000ffe1-0000-1000-8000-00805f9b34fb'
 
 haptic_on = bytearray([0x01])
@@ -39,8 +40,15 @@ def handle_run():
 # Creating the GUI
 root = tk.Tk()
 root.title("WHIMS Server")
+image = Image.open("chrome.png")
+# not sure why LANCZOS is not defined but it works
+resized_image = image.resize((600, 300), Image.LANCZOS)
+chrome_img = ImageTk.PhotoImage(resized_image)
+# same here, not sure why there is an error but it works
+chrome_label = tk.Label(root, image=chrome_img)
+chrome_label.pack(pady=10)
 
-status_box = tk.Listbox(root, width=50, height=10)
+status_box = tk.Listbox(root, width=60, height=15)
 status_box.pack(pady=10)
 
 start_button = tk.Button(root, text="Start", command=handle_run)
