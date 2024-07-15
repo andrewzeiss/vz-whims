@@ -1,0 +1,1609 @@
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var id_chrome as ResourceId;
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 10; @position = 27; initialized = true; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 13; ]
+    module Layouts {
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 13; ]
+        <init> {
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 14; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_14_74_23_8_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 15 12 ]
+            [ "_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_14_74_23_8_start" "_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_14_74_23_8_stop" ]
+            %rez_cmp_local_text_6655506015.1 = local;
+            %tmp.3 = getm $.Toybox.WatchUi;
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 6;
+            %tmp.7 = const :color;
+            %tmp.8 = getm $.Toybox.Graphics;
+            %tmp.9 = getv %tmp.8 :COLOR_WHITE;
+            %tmp.10 = dup %tmp.5;
+            %tmp.11 = aputv %tmp.10 %tmp.7 %tmp.9;
+            %tmp.13 = const :locX;
+            %tmp.14 = 320;
+            %tmp.15 = 0.5;
+            %tmp.16 = mul %tmp.14 %tmp.15;
+            %tmp.17 = dup %tmp.11;
+            %tmp.18 = aputv %tmp.17 %tmp.13 %tmp.16;
+            %tmp.20 = const :locY;
+            %tmp.21 = 5;
+            %tmp.22 = dup %tmp.18;
+            %tmp.23 = aputv %tmp.22 %tmp.20 %tmp.21;
+            %tmp.25 = const :text;
+            %tmp.26 = getm $;
+            %tmp.27 = getv %tmp.26 :Rez;
+            %tmp.28 = getv %tmp.27 :Strings;
+            %tmp.29 = getv %tmp.28 :prompt;
+            %tmp.30 = dup %tmp.23;
+            %tmp.31 = aputv %tmp.30 %tmp.25 %tmp.29;
+            %tmp.33 = const :justification;
+            %tmp.34 = getm $.Toybox.Graphics;
+            %tmp.35 = getv %tmp.34 :TEXT_JUSTIFY_CENTER;
+            %tmp.36 = dup %tmp.31;
+            %tmp.37 = aputv %tmp.36 %tmp.33 %tmp.35;
+            %tmp.39 = const :font;
+            %tmp.40 = getm $.Toybox.Graphics;
+            %tmp.41 = getv %tmp.40 :FONT_MEDIUM;
+            %tmp.42 = dup %tmp.37;
+            %tmp.43 = aputv %tmp.42 %tmp.39 %tmp.41;
+            %tmp.1 = newc %tmp.4 (%tmp.43);
+            lputv %rez_cmp_local_text_6655506015.1 %tmp.1;
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 17 12 ]
+            [ "_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_14_74_23_8_start" "_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_14_74_23_8_stop" ]
+            %rez_cmp_local_text_2915065491.2 = local;
+            %tmp.46 = getm $.Toybox.WatchUi;
+            %tmp.47 = getv function ? %tmp.46 :Text;
+            %tmp.48 = newd 6;
+            %tmp.50 = const :color;
+            %tmp.51 = getm $.Toybox.Graphics;
+            %tmp.52 = getv %tmp.51 :COLOR_WHITE;
+            %tmp.53 = dup %tmp.48;
+            %tmp.54 = aputv %tmp.53 %tmp.50 %tmp.52;
+            %tmp.56 = const :locX;
+            %tmp.57 = 320;
+            %tmp.58 = 0.5;
+            %tmp.59 = mul %tmp.57 %tmp.58;
+            %tmp.60 = dup %tmp.54;
+            %tmp.61 = aputv %tmp.60 %tmp.56 %tmp.59;
+            %tmp.63 = const :locY;
+            %tmp.64 = 70;
+            %tmp.65 = dup %tmp.61;
+            %tmp.66 = aputv %tmp.65 %tmp.63 %tmp.64;
+            %tmp.68 = const :text;
+            %tmp.69 = getm $;
+            %tmp.70 = getv %tmp.69 :Rez;
+            %tmp.71 = getv %tmp.70 :Strings;
+            %tmp.72 = getv %tmp.71 :instructions;
+            %tmp.73 = dup %tmp.66;
+            %tmp.74 = aputv %tmp.73 %tmp.68 %tmp.72;
+            %tmp.76 = const :justification;
+            %tmp.77 = getm $.Toybox.Graphics;
+            %tmp.78 = getv %tmp.77 :TEXT_JUSTIFY_CENTER;
+            %tmp.79 = dup %tmp.74;
+            %tmp.80 = aputv %tmp.79 %tmp.76 %tmp.78;
+            %tmp.82 = const :font;
+            %tmp.83 = getm $.Toybox.Graphics;
+            %tmp.84 = getv %tmp.83 :FONT_TINY;
+            %tmp.85 = dup %tmp.80;
+            %tmp.86 = aputv %tmp.85 %tmp.82 %tmp.84;
+            %tmp.44 = newc %tmp.47 (%tmp.86);
+            lputv %rez_cmp_local_text_2915065491.2 %tmp.44;
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 19 12 ]
+            [ "_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_14_74_23_8_start" "_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_14_74_23_8_stop" ]
+            %rez_cmp_local_bitmap_id_chrome.3 = local;
+            %tmp.89 = getm $.Toybox.WatchUi;
+            %tmp.90 = getv function ? %tmp.89 :Bitmap;
+            %tmp.91 = newd 4;
+            %tmp.93 = const :identifier;
+            %tmp.94 = "id_chrome";
+            %tmp.95 = dup %tmp.91;
+            %tmp.96 = aputv %tmp.95 %tmp.93 %tmp.94;
+            %tmp.98 = const :rezId;
+            %tmp.99 = getm $;
+            %tmp.100 = getv %tmp.99 :Rez;
+            %tmp.101 = getv %tmp.100 :Drawables;
+            %tmp.102 = getv %tmp.101 :id_chrome;
+            %tmp.103 = dup %tmp.96;
+            %tmp.104 = aputv %tmp.103 %tmp.98 %tmp.102;
+            %tmp.106 = const :locX;
+            %tmp.107 = getm $.Toybox.WatchUi;
+            %tmp.108 = getv %tmp.107 :LAYOUT_HALIGN_CENTER;
+            %tmp.109 = dup %tmp.104;
+            %tmp.110 = aputv %tmp.109 %tmp.106 %tmp.108;
+            %tmp.112 = const :locY;
+            %tmp.113 = getm $.Toybox.WatchUi;
+            %tmp.114 = getv %tmp.113 :LAYOUT_VALIGN_CENTER;
+            %tmp.115 = dup %tmp.110;
+            %tmp.116 = aputv %tmp.115 %tmp.112 %tmp.114;
+            %tmp.87 = newc %tmp.90 (%tmp.116);
+            lputv %rez_cmp_local_bitmap_id_chrome.3 %tmp.87;
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 20 12 ]
+            %tmp.117 = lgetv %rez_cmp_local_bitmap_id_chrome.3;
+            %tmp.118 = getv function %tmp.117 :setLocation;
+            %tmp.119 = 320;
+            %tmp.120 = lgetv %rez_cmp_local_bitmap_id_chrome.3;
+            %tmp.121 = getv %tmp.120 :width;
+            %tmp.122 = sub %tmp.119 %tmp.121;
+            %tmp.123 = 0.5;
+            %tmp.124 = mul %tmp.122 %tmp.123;
+            %tmp.125 = 360;
+            %tmp.126 = lgetv %rez_cmp_local_bitmap_id_chrome.3;
+            %tmp.127 = getv %tmp.126 :height;
+            %tmp.128 = sub %tmp.125 %tmp.127;
+            %tmp.129 = 0.5;
+            %tmp.130 = mul %tmp.128 %tmp.129;
+            invoke %tmp.117 %tmp.118(%tmp.124, %tmp.130);
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 22 12 ]
+            %tmp.131 = newa 3 Array<WatchUi.Drawable>;
+            %tmp.133 = lgetv %rez_cmp_local_text_6655506015.1;
+            %tmp.134 = dup %tmp.131;
+            %tmp.135 = aputv %tmp.134 0 %tmp.133;
+            %tmp.137 = lgetv %rez_cmp_local_text_2915065491.2;
+            %tmp.138 = dup %tmp.135;
+            %tmp.139 = aputv %tmp.138 1 %tmp.137;
+            %tmp.141 = lgetv %rez_cmp_local_bitmap_id_chrome.3;
+            %tmp.142 = dup %tmp.139;
+            %tmp.143 = aputv %tmp.142 2 %tmp.141;
+            ret %tmp.143;
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_14_74_23_8_stop:
+        }
+    }
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 26; ]
+    module Menus {
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 26; ]
+        <init> {
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 27; ]
+        class MainMenu extends WatchUi.Menu{
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 27; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 27; ]
+            static
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 28; ]
+            function initialize() as Void {
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_28_34_32_12_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 29 16 ]
+                %tmp.2 = getv ? :Menu;
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 30 16 ]
+                %tmp.4 = self;
+                %tmp.5 = getv function %tmp.4 :addItem;
+                %tmp.6 = getm $.Toybox.WatchUi;
+                %tmp.7 = getv function %tmp.6 :loadResource;
+                %tmp.8 = getm $;
+                %tmp.9 = getv %tmp.8 :Rez;
+                %tmp.10 = getv %tmp.9 :Strings;
+                %tmp.11 = getv %tmp.10 :menu_label_1;
+                %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.11);
+                %tmp.13 = as %tmp.12 String;
+                %tmp.15 = const :item_1;
+                invoke %tmp.4 %tmp.5(%tmp.13, %tmp.15);
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 31 16 ]
+                %tmp.16 = self;
+                %tmp.17 = getv function %tmp.16 :addItem;
+                %tmp.18 = getm $.Toybox.WatchUi;
+                %tmp.19 = getv function %tmp.18 :loadResource;
+                %tmp.20 = getm $;
+                %tmp.21 = getv %tmp.20 :Rez;
+                %tmp.22 = getv %tmp.21 :Strings;
+                %tmp.23 = getv %tmp.22 :menu_label_2;
+                %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.23);
+                %tmp.25 = as %tmp.24 String;
+                %tmp.27 = const :item_2;
+                invoke %tmp.16 %tmp.17(%tmp.25, %tmp.27);
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_bin_gen_006_B4115_00_source_Rez_mcgen_28_34_32_12_stop:
+            }
+        }
+    }
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 36; ]
+    module Strings {
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 36; ]
+        <init> {
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 37; @position = 27; initialized = true; ]
+        var instructions as ResourceId;
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 38; @position = 27; initialized = true; ]
+        var menu_label_1 as ResourceId;
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 39; @position = 27; initialized = true; ]
+        var menu_label_2 as ResourceId;
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 40; @position = 27; initialized = true; ]
+        var prompt as ResourceId;
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 41; @position = 27; initialized = true; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 44; ]
+    module Styles {
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 44; ]
+        <init> {
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 45; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 45; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 46; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 49; ]
+        module system_size__menu_header {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 49; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 50; @position = 18; ]
+            const width as Number = 320;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 51; @position = 18; ]
+            const height as Number = 68;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 54; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 54; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 55; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 58; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 58; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 59; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 62; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 62; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 63; @position = 18; ]
+            const x as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 64; @position = 18; ]
+            const y as Number = 65;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 67; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 67; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 68; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__about.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 69; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 70; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 71; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 74; ]
+        module system_icon_light__question {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 75; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__question.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 76; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 77; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 78; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 81; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 81; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 82; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 85; ]
+        module prompt_font__title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 85; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 86 18 ]
+                %tmp.28 = getm $.Toybox.Graphics;
+                %tmp.29 = getv %tmp.28 :TEXT_JUSTIFY_CENTER;
+                %tmp.30 = getm $.Toybox.Graphics;
+                %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_VCENTER;
+                %tmp.32 = bitor %tmp.29 %tmp.31;
+                putv self :justification %tmp.32;
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 87 18 ]
+                %tmp.33 = getm $.Toybox.Graphics;
+                %tmp.34 = getv %tmp.33 :FONT_SMALL;
+                putv self :font %tmp.34;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 86; @position = 18; ]
+            const justification;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 87; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 90; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 90; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 91; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__discard.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 92; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 93; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 94; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 97; ]
+        module system_size__menu_item {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 97; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 98; @position = 18; ]
+            const width as Number = 320;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 99; @position = 18; ]
+            const height as Number = 98;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 102; ]
+        module system_color_dark__text {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 102; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 104 18 ]
+                %tmp.35 = getm $.Toybox.Graphics;
+                %tmp.36 = getv %tmp.35 :COLOR_TRANSPARENT;
+                putv self :background %tmp.36;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 103; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 104; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 107; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 107; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 108; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__discard.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 109; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 112; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 112; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 113; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__hint_action_menu.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 114; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 117; ]
+        module prompt_size__title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 117; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 118; @position = 18; ]
+            const width as Number = 320;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 119; @position = 18; ]
+            const height as Number = 54;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 122; ]
+        module confirmation_font__body {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 122; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 123 18 ]
+                %tmp.37 = getm $.Toybox.Graphics;
+                %tmp.38 = getv %tmp.37 :TEXT_JUSTIFY_CENTER;
+                %tmp.39 = getm $.Toybox.Graphics;
+                %tmp.40 = getv %tmp.39 :TEXT_JUSTIFY_VCENTER;
+                %tmp.41 = bitor %tmp.38 %tmp.40;
+                putv self :justification %tmp.41;
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 124 18 ]
+                %tmp.42 = getm $.Toybox.Graphics;
+                %tmp.43 = getv %tmp.42 :FONT_TINY;
+                putv self :font %tmp.43;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 123; @position = 18; ]
+            const justification;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 124; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 127; ]
+        module system_color_dark__background {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 127; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 128; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 129; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 132; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 132; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 133; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 136; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 136; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 137; @position = 18; ]
+            const scaleX as Number = 40;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 138; @position = 18; ]
+            const scaleY as Number = 40;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 139; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 142; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 142; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 143; @position = 18; ]
+            const y1 as Number = 300;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 144; @position = 18; ]
+            const x1 as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 145; @position = 18; ]
+            const y2 as Number = 360;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 146; @position = 18; ]
+            const x2 as Number = 320;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 149; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 149; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 150 18 ]
+                %tmp.44 = getm $.Toybox.Graphics;
+                %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.45;
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 151 18 ]
+                %tmp.46 = getm $.Toybox.Graphics;
+                %tmp.47 = getv %tmp.46 :FONT_TINY;
+                putv self :font %tmp.47;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 150; @position = 18; ]
+            const justification;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 151; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 154; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 154; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 155; @position = 18; ]
+            const x as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 156; @position = 18; ]
+            const y as Number = 65;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 159; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 159; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 160; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 163; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 163; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 164; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 165; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 168; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 168; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 169; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__hint_action_menu.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 170; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 173; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 173; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 174; @position = 18; ]
+            const x as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 175; @position = 18; ]
+            const y as Number = 306;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 178; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 178; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 179; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 180; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 183; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 183; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 184; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 187; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 187; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 188; @position = 18; ]
+            const width as Number = 320;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 189; @position = 18; ]
+            const height as Number = 252;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 192; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 192; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 193; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 196; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 196; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 197; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 198; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 201; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 201; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 202 18 ]
+                %tmp.48 = getm $.Toybox.WatchUi;
+                %tmp.49 = getv %tmp.48 :KEY_ENTER;
+                putv self :button %tmp.49;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 202; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 205; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 205; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 206; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 209; ]
+        module system_input__action_menu {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 209; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 210; @position = 18; ]
+            const y1 as Number = 305;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 211; @position = 18; ]
+            const x1 as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 212; @position = 18; ]
+            const y2 as Number = 360;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 213; @position = 18; ]
+            const x2 as Number = 320;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 216; ]
+        module system_icon_light__save {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 216; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 217; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__save.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 218; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 219; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 220; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 223; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 223; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 225 18 ]
+                %tmp.50 = getm $.Toybox.Graphics;
+                %tmp.51 = getv %tmp.50 :COLOR_TRANSPARENT;
+                putv self :background %tmp.51;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 224; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 225; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 228; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 228; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 229; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 232; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 232; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 233; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__warning.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 234; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 235; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 236; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 239; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 239; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 241 18 ]
+                %tmp.52 = getm $.Toybox.Graphics;
+                %tmp.53 = getv %tmp.52 :COLOR_TRANSPARENT;
+                putv self :background %tmp.53;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 240; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 241; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 244; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 244; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 245; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 246; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 249; ]
+        module activity_color_light__background {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 249; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 250; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 251; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 254; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 254; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 255; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_positive__hint_button_right_top.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 256; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 259; ]
+        module system_size__screen {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 259; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 260; @position = 18; ]
+            const width as Number = 320;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 261; @position = 18; ]
+            const height as Number = 360;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 264; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 264; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 265; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__hint_button_right_bottom.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 266; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 269; ]
+        module system_color_light__background {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 269; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 270; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 271; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 274; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 274; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 275; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 276; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 279; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 279; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 280; @position = 18; ]
+            const x as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 281; @position = 18; ]
+            const y as Number = 299;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 284; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 284; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 286 18 ]
+                %tmp.54 = getm $.Toybox.Graphics;
+                %tmp.55 = getv %tmp.54 :COLOR_TRANSPARENT;
+                putv self :background %tmp.55;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 285; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 286; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 289; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 289; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 290 18 ]
+                %tmp.56 = getm $.Toybox.WatchUi;
+                %tmp.57 = getv %tmp.56 :KEY_ESC;
+                putv self :button %tmp.57;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 290; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 293; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 293; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 294; @position = 18; ]
+            const x as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 295; @position = 18; ]
+            const y as Number = 90;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 298; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 298; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 299; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__search.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 300; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 301; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 302; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 305; ]
+        module activity_color_light__text {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 305; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 307 18 ]
+                %tmp.58 = getm $.Toybox.Graphics;
+                %tmp.59 = getv %tmp.58 :COLOR_TRANSPARENT;
+                putv self :background %tmp.59;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 306; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 307; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 310; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 310; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 311; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 312; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 315; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 315; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 316; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__save.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 317; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 318; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 319; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 322; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 322; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 323; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 326; ]
+        module system_icon_light__search {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 326; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 327; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__search.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 328; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 329; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 330; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 333; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 333; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 334; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 337; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 337; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 338; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 341; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 341; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 342; @position = 18; ]
+            const x as Number = 307;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 343; @position = 18; ]
+            const y as Number = 287;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 344; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 347; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 347; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 348; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 349; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 352; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 352; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 354 18 ]
+                %tmp.60 = getm $.Toybox.Graphics;
+                %tmp.61 = getv %tmp.60 :COLOR_TRANSPARENT;
+                putv self :background %tmp.61;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 353; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 354; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 357; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 357; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 358; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 359; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 362; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 362; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 364 18 ]
+                %tmp.62 = getm $.Toybox.Graphics;
+                %tmp.63 = getv %tmp.62 :COLOR_TRANSPARENT;
+                putv self :background %tmp.63;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 363; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 364; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 367; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 367; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 368; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 369; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 372; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 372; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 373; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 374; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 377; ]
+        module prompt_loc__title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 377; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 378; @position = 18; ]
+            const x as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 379; @position = 18; ]
+            const y as Number = 32;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 382; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 382; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 383; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 386; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 386; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 388 18 ]
+                %tmp.64 = getm $.Toybox.Graphics;
+                %tmp.65 = getv %tmp.64 :COLOR_TRANSPARENT;
+                putv self :background %tmp.65;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 387; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 388; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 391; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 391; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 392; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 393; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 396; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 396; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 397; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 400; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 400; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 401; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 402; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 405; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 405; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 406; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__cancel.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 407; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 408; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 409; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 412; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 412; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 413; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 414; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 417; ]
+        module system_icon_light__about {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 417; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 418; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__about.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 419; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 420; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 421; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 424; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 424; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 425; @position = 18; ]
+            const scaleX as Number = 34;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 426; @position = 18; ]
+            const scaleY as Number = 34;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 427; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 430; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 430; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 431; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 434; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 434; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 435; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 436; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 439; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 439; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 440; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__hint_action_menu.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 441; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 444; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 444; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 445; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 448; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 448; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 449; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 452; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 452; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 453; @position = 18; ]
+            const x as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 454; @position = 18; ]
+            const y as Number = 0;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 457; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 457; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 458; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 459; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 462; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 462; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 463; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 464; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 467; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 467; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 468; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 471; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 471; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 472; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 475; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 475; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 476; @position = 18; ]
+            const scaleX as Number = 52;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 477; @position = 18; ]
+            const scaleY as Number = 52;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 478; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 481; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 481; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 482; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_destructive__warning.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 483; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 486; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 486; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 487; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 490; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 490; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 491; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__cancel.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 492; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 493; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 494; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 497; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 497; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 498; @position = 18; ]
+            const width as Number = 320;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 499; @position = 18; ]
+            const height as Number = 220;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 502; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 502; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 503; @position = 18; ]
+            const x as Number = 307;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 504; @position = 18; ]
+            const y as Number = 70;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 505; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 508; ]
+        module system_color_light__text {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 508; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 510 18 ]
+                %tmp.66 = getm $.Toybox.Graphics;
+                %tmp.67 = getv %tmp.66 :COLOR_TRANSPARENT;
+                putv self :background %tmp.67;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 509; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 510; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 513; ]
+        module system_icon_light__check {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 513; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 514; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__check.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 515; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 516; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 517; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 520; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 520; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 521; @position = 18; ]
+            const y1 as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 522; @position = 18; ]
+            const x1 as Number = 0;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 523; @position = 18; ]
+            const y2 as Number = 60;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 524; @position = 18; ]
+            const x2 as Number = 320;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 527; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 527; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 528; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__revert.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 529; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 530; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 531; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 534; ]
+        module system_size__subwindow {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 534; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 535; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 538; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 538; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 539; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 542; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 542; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 543; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__check.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 544; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 545; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 546; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 549; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 549; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 550; @position = 18; ]
+            const x as Number = 260;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 551; @position = 18; ]
+            const y as Number = 288;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 552; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 555; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 555; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 556; @position = 18; ]
+            const x as Number = 260;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 557; @position = 18; ]
+            const y as Number = 70;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 558; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 561; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 561; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 562; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_positive__hint_action_menu.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 563; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 566; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 566; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 567; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 570; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 570; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 571; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 574; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 574; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 575; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 576; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 579; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 579; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 580; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 581; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 584; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 584; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 585; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__revert.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 586; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 587; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 588; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 591; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 591; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 592; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 593; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 596; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 596; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 597; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__question.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 598; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 599; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 600; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 603; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 603; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 604; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__discard.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 605; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 606; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 607; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 610; ]
+        module device_info {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 610; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 612 18 ]
+                %tmp.68 = getm $.Toybox.System;
+                %tmp.69 = getv %tmp.68 :SCREEN_SHAPE_RECTANGLE;
+                putv self :screenShape %tmp.69;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 611; @position = 18; ]
+            const screenWidth as Number = 320;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 612; @position = 18; ]
+            const screenShape;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 613; @position = 18; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 614; @position = 18; ]
+            const hasGpu as Boolean = false;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 615; @position = 18; ]
+            const screenHeight as Number = 360;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 616; @position = 18; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 617; @position = 18; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 620; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 620; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 621; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 622; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 625; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 625; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 626 18 ]
+                %tmp.70 = getm $.Toybox.Graphics;
+                %tmp.71 = getv %tmp.70 :TEXT_JUSTIFY_CENTER;
+                %tmp.72 = getm $.Toybox.Graphics;
+                %tmp.73 = getv %tmp.72 :TEXT_JUSTIFY_VCENTER;
+                %tmp.74 = bitor %tmp.71 %tmp.73;
+                putv self :justification %tmp.74;
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 627 18 ]
+                %tmp.75 = getm $.Toybox.Graphics;
+                %tmp.76 = getv %tmp.75 :FONT_TINY;
+                putv self :font %tmp.76;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 626; @position = 18; ]
+            const justification;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 627; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 630; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 630; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 631; @position = 18; ]
+            const scaleX as Float = 0.14;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 632; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 635; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 635; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 636; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_dark__warning.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 637; @position = 18; ]
+            const compress as String = "true";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 638; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 639; @position = 18; ]
+            const automaticPalette as String = "true";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 642; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 642; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 643; @position = 18; ]
+            const x as Number = 160;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 644; @position = 18; ]
+            const y as Number = 47;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 645; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 646; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 649; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 649; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 650; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 653; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 653; ]
+            <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" 655 18 ]
+                %tmp.77 = getm $.Toybox.Graphics;
+                %tmp.78 = getv %tmp.77 :COLOR_TRANSPARENT;
+                putv self :background %tmp.78;
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 654; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 655; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 658; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 658; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 659; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 660; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 663; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 663; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 664; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 665; @position = 18; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 668; ]
+        module confirmation_size__body {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 668; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 669; @position = 18; ]
+            const width as Number = 320;
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 670; @position = 18; ]
+            const height as Number = 220;
+        }
+        [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 673; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 673; ]
+            <init> {
+            }
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 674; @position = 18; ]
+            const filename as String = "/Users/andrewzeiss/Library/Application Support/Garmin/ConnectIQ/Devices/venusq2/system_icon_positive__check.svg";
+            [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 675; @position = 18; ]
+            const dithering as String = "none";
+        }
+    }
+}
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

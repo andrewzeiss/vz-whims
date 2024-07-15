@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435481" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" id="3" lineNum="5" parent="globals/WhimsWearableApp" pc="268435501" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" id="4" lineNum="4" parent="globals/WhimsWearableView" pc="268435513" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" id="5" lineNum="4" parent="globals/WhimsWearableDelegate" pc="268435525" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableMenuDelegate.mc" id="6" lineNum="5" parent="globals/WhimsWearableMenuDelegate" pc="268435537" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" id="7" lineNum="12" parent="globals/WhimsWearableApp" pc="268435549" symbol="onStart"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" id="8" lineNum="20" parent="globals/WhimsWearableApp" pc="268435552" symbol="getInitialView"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" id="8" lineNum="21" parent="globals/WhimsWearableApp" pc="268435554" symbol="getInitialView"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" id="9" lineNum="7" parent="globals/WhimsWearableApp" pc="268435609" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" id="9" lineNum="8" parent="globals/WhimsWearableApp" pc="268435611" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" id="10" lineNum="16" parent="globals/WhimsWearableApp" pc="268435624" symbol="onStop"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" id="12" lineNum="11" parent="globals/WhimsWearableView" pc="268435627" symbol="onLayout"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" id="12" lineNum="12" parent="globals/WhimsWearableView" pc="268435629" symbol="onLayout"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" id="13" lineNum="6" parent="globals/WhimsWearableView" pc="268435663" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" id="13" lineNum="7" parent="globals/WhimsWearableView" pc="268435665" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" id="15" lineNum="22" parent="globals/WhimsWearableView" pc="268435678" symbol="onUpdate"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" id="15" lineNum="24" parent="globals/WhimsWearableView" pc="268435680" symbol="onUpdate"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" id="16" lineNum="10" parent="globals/WhimsWearableDelegate" pc="268435697" symbol="onMenu"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" id="16" lineNum="11" parent="globals/WhimsWearableDelegate" pc="268435699" symbol="onMenu"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" id="16" lineNum="12" parent="globals/WhimsWearableDelegate" pc="268435768" symbol="onMenu"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" id="17" lineNum="6" parent="globals/WhimsWearableDelegate" pc="268435770" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" id="17" lineNum="7" parent="globals/WhimsWearableDelegate" pc="268435772" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableMenuDelegate.mc" id="18" lineNum="11" parent="globals/WhimsWearableMenuDelegate" pc="268435785" symbol="onMenuItem"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableMenuDelegate.mc" id="18" lineNum="12" parent="globals/WhimsWearableMenuDelegate" pc="268435787" symbol="onMenuItem"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableMenuDelegate.mc" id="18" lineNum="13" parent="globals/WhimsWearableMenuDelegate" pc="268435798" symbol="onMenuItem"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableMenuDelegate.mc" id="18" lineNum="14" parent="globals/WhimsWearableMenuDelegate" pc="268435819" symbol="onMenuItem"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableMenuDelegate.mc" id="18" lineNum="15" parent="globals/WhimsWearableMenuDelegate" pc="268435830" symbol="onMenuItem"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableMenuDelegate.mc" id="19" lineNum="7" parent="globals/WhimsWearableMenuDelegate" pc="268435852" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableMenuDelegate.mc" id="19" lineNum="8" parent="globals/WhimsWearableMenuDelegate" pc="268435854" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="20" lineNum="14" parent="globals/Rez/Layouts" pc="268435867" symbol="MainLayout"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="20" lineNum="15" parent="globals/Rez/Layouts" pc="268435878" symbol="MainLayout"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="20" lineNum="17" parent="globals/Rez/Layouts" pc="268435978" symbol="MainLayout"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="20" lineNum="19" parent="globals/Rez/Layouts" pc="268436078" symbol="MainLayout"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="20" lineNum="20" parent="globals/Rez/Layouts" pc="268436165" symbol="MainLayout"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="20" lineNum="22" parent="globals/Rez/Layouts" pc="268436207" symbol="MainLayout"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="21" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268436227" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="22" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268436239" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="22" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268436241" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="22" lineNum="30" parent="globals/Rez/Menus/MainMenu" pc="268436253" symbol="initialize"/>
+        <entry filename="/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/bin/gen/006-B4115-00/source/Rez.mcgen" id="22" lineNum="31" parent="globals/Rez/Menus/MainMenu" pc="268436298" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8389346" symbol="text"/>
+        <entry field="true" id="18" symbol="instructions"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="5" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="15" method="true" symbol="MainLayout"/>
+        <entry field="true" id="14" symbol="id_chrome"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="8" object="true" symbol="WhimsWearableDelegate"/>
+        <entry field="true" id="17" symbol="AppName"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="21" symbol="prompt"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="7" object="true" symbol="WhimsWearableApp"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="23" symbol="item_2"/>
+        <entry id="22" symbol="item_1"/>
+        <entry id="12" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="10" object="true" symbol="WhimsWearableView"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="16" object="true" symbol="MainMenu"/>
+        <entry id="9" object="true" symbol="WhimsWearableMenuDelegate"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="13" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry id="8389347" symbol="color"/>
+        <entry id="11" module="true" symbol="Layouts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="20" symbol="menu_label_2"/>
+        <entry field="true" id="19" symbol="menu_label_1"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435662" name="dc" stackId="1" startPc="268435627"/>
+        <entry arg="true" endPc="268435696" name="dc" stackId="1" startPc="268435678"/>
+        <entry arg="true" endPc="268435851" name="item" stackId="1" startPc="268435785"/>
+        <entry arg="true" endPc="268436226" name="dc" stackId="1" startPc="268435867"/>
+        <entry endPc="268436226" name="rez_cmp_local_text_6655506015" stackId="2" startPc="268435878"/>
+        <entry endPc="268436226" name="rez_cmp_local_text_2915065491" stackId="3" startPc="268435878"/>
+        <entry endPc="268436226" name="rez_cmp_local_bitmap_id_chrome" stackId="4" startPc="268435878"/>
+    </localVars>
+    <deviceInfo deviceVersion="d768f42b362bd6ce30dcbbc223d308fbb5a79106" partNumber="006-B4115-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="id_chrome"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="prompt"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="instructions"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Rez" offset="152" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/WhimsWearableApp" offset="214" parentId="globals" symbolId="WhimsWearableApp" type="class"/>
+        <dataEntry label="globals/WhimsWearableView" offset="285" parentId="globals" symbolId="WhimsWearableView" type="class"/>
+        <dataEntry label="globals/WhimsWearableDelegate" offset="365" parentId="globals" symbolId="WhimsWearableDelegate" type="class"/>
+        <dataEntry label="globals/WhimsWearableMenuDelegate" offset="418" parentId="globals" symbolId="WhimsWearableMenuDelegate" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="471" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="515" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="550" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="585" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="656" parentId="Menus" symbolId="MainMenu" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435500" name="&lt;init&gt;" parent="Rez" startPc="268435481">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435512" name="&lt;init&gt;" parent="WhimsWearableApp" startPc="268435501">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="WhimsWearableView" startPc="268435513">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="WhimsWearableDelegate" startPc="268435525">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="WhimsWearableMenuDelegate" startPc="268435537">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435551" name="onStart" parent="WhimsWearableApp" startPc="268435549">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435608" name="getInitialView" parent="WhimsWearableApp" startPc="268435552">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435623" name="initialize" parent="WhimsWearableApp" startPc="268435609">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435626" name="onStop" parent="WhimsWearableApp" startPc="268435624">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="WhimsWearableView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435662" name="onLayout" parent="WhimsWearableView" startPc="268435627">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435677" name="initialize" parent="WhimsWearableView" startPc="268435663">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="WhimsWearableView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435696" name="onUpdate" parent="WhimsWearableView" startPc="268435678">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435769" name="onMenu" parent="WhimsWearableDelegate" startPc="268435697">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435784" name="initialize" parent="WhimsWearableDelegate" startPc="268435770">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435851" name="onMenuItem" parent="WhimsWearableMenuDelegate" startPc="268435785">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435866" name="initialize" parent="WhimsWearableMenuDelegate" startPc="268435852">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436226" name="MainLayout" parent="Layouts" startPc="268435867">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436238" name="&lt;init&gt;" parent="MainMenu" startPc="268436227">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436343" name="initialize" parent="MainMenu" startPc="268436239">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
