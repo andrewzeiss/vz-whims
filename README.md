@@ -23,10 +23,18 @@ Note that an arduino with Bluetooth low energy capabilities is required to run t
 The WhimsWearable is an application designed for Garmin wearable devices. I found the [this video](https://www.youtube.com/watch?v=_sHBqQKpIZg&ab_channel=VolodymyrBudnyi) useful for the download and installation of Garmin SDK. Garmin applications are written in MonkeyC, an object oriented language I found to be similar to Java. The Project directory and structure closely resembles that of Android Studio. A tutorial and many examples of Garmin applications can be found [here](https://starttorun.info/connect-iq-apps-with-source-code/).
 
 The garmin SDK specifics can be found [here](https://developer.garmin.com/connect-iq/api-docs/index.html), although be warned the documentation is extremely lengthy and can be difficult to navigate. Some useful links are as follows-  
+
+Documentation  
 [Access Current Stress Level](https://developer.garmin.com/connect-iq/api-docs/Toybox/ActivityMonitor/Info.html#stressScore-var)  
 [Bluetooth methods](https://developer.garmin.com/connect-iq/api-docs/Toybox/BluetoothLowEnergy.html)
 
+Video Resources  
+[Garmin MonkeyC Overview](https://www.youtube.com/watch?v=bxjmiD-Qfv4&t=361s&ab_channel=Garmin)
+[Creating a sample Application](https://www.youtube.com/watch?v=Eb8VxRgzzgU&ab_channel=SportsGearMag)
+
 Currently, the application is setup for minimum sdk level 4.0, and is configured only for a Garmin Venu Sq2. A demonstration of adding more compatible devices can be found in the previous video link.  
+
+Garmin applications follow an MVC pattern, with the WhimsWearableApp file acting as the controller, the WhimsWearableDelegate as the Model, and the WhimsWearableView working together with the layout.xml as the view. I have completed initial setup of the code and provided an outline for the methods to retrieve the Stress levels, connect to the Arduino, and trigger the singleCycle.
 
 ### WhimsServer
 
