@@ -30,8 +30,8 @@ _Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_Whims
     }
     [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc"; @line = 20; ]
     function getInitialView() as [Views] or [Views, InputDelegates] {
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableApp_mc_20_68_22_4_start:
-[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" 21 8 ]
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableApp_mc_20_68_23_4_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" 22 8 ]
         %tmp.1 = newa 2;
         %tmp.5 = getv ? :WhimsWearableView;
         %tmp.2 = newc %tmp.5 ();
@@ -42,19 +42,19 @@ _Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_Whims
         %tmp.12 = dup %tmp.7;
         %tmp.13 = aputv %tmp.12 1 %tmp.8;
         ret %tmp.13;
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableApp_mc_20_68_22_4_stop:
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableApp_mc_20_68_23_4_stop:
     }
 }
-[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc"; @line = 26; ]
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc"; @line = 27; ]
 function getApp() as WhimsWearableApp {
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableApp_mc_26_38_28_0_start:
-[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" 27 4 ]
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableApp_mc_27_38_29_0_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc" 28 4 ]
     %tmp.1 = getm $.Toybox.Application;
     %tmp.2 = getv function %tmp.1 :getApp;
     %tmp.3 = invoke %tmp.1 %tmp.2();
     %tmp.4 = as %tmp.3 WhimsWearableApp;
     ret %tmp.4;
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableApp_mc_26_38_28_0_stop:
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableApp_mc_27_38_29_0_stop:
 }
 [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableApp.mc"; @line = 1; ]
 <init> {

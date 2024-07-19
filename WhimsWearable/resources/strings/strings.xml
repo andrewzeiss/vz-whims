@@ -3,6 +3,8 @@
 
     <string id="prompt">Welcome!</string>
     <string id="instructions">Press start to begin application</string>
+    <string id="stressLabel">Stress Level</string>
+    <string id="stressReading">0</string>
 
     <string id="menu_label_1">Item 1</string>
     <string id="menu_label_2">Item 2</string>

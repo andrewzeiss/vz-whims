@@ -2,28 +2,32 @@
 import Toybox.Graphics;
 [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 2; ]
 import Toybox.WatchUi;
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 3; ]
+import Toybox.ActivityMonitor;
 [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 4; ]
+import Toybox.Lang;
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 6; ]
 class WhimsWearableView extends WatchUi.View{
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 4; ]
-    <init> {
-    }
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 4; ]
-    static
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 6; ]
     <init> {
     }
     [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 8; ]
     function initialize() as Void {
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_6_26_8_4_start:
-[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" 7 8 ]
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_8_26_10_4_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" 9 8 ]
         %tmp.2 = getv ? :View;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_6_26_8_4_stop:
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_8_26_10_4_stop:
     }
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 11; ]
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 13; ]
     function onLayout(dc as Dc) as Void {
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_11_40_13_4_start:
-[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" 12 8 ]
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_13_40_15_4_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" 14 8 ]
         %tmp.1 = self;
         %tmp.2 = getv function %tmp.1 :setLayout;
         %tmp.4 = getv ? :Rez;
@@ -32,22 +36,32 @@ _Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_Whims
         %tmp.8 = lgetv %dc;
         %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
         invoke %tmp.1 %tmp.2(%tmp.9);
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_11_40_13_4_stop:
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_13_40_15_4_stop:
     }
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 18; ]
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 20; ]
     function onShow() as Void {
     }
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 22; ]
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 25; @position = 8; ]
+    var stressScore as Lang.Number or Null;
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 27; ]
     function onUpdate(dc as Dc) as Void {
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_22_40_25_4_start:
-[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" 24 8 ]
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_27_40_34_4_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" 30 8 ]
         %tmp.2 = getv ? :View;
-        %tmp.3 = getv function %tmp.2 :onUpdate;
-        %tmp.5 = lgetv %dc;
-        invoke %tmp.2 %tmp.3(%tmp.5);
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_22_40_25_4_stop:
+        %tmp.3 = getv function %tmp.2 :findDrawableById;
+        %tmp.4 = "stressReading";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        %tmp.6 = getv function %tmp.5 :setText;
+        %tmp.8 = getv ? :stressScore;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc" 33 8 ]
+        %tmp.10 = getv ? :View;
+        %tmp.11 = getv function %tmp.10 :onUpdate;
+        %tmp.13 = lgetv %dc;
+        invoke %tmp.10 %tmp.11(%tmp.13);
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableView_mc_27_40_34_4_stop:
     }
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 30; ]
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableView.mc"; @line = 39; ]
     function onHide() as Void {
     }
 }

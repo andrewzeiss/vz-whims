@@ -1,5 +1,7 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
+import Toybox.ActivityMonitor;
+import Toybox.Lang;
 
 class WhimsWearableView extends WatchUi.View {
 
@@ -19,7 +21,14 @@ class WhimsWearableView extends WatchUi.View {
     }
 
     // Update the view
+
+    var stressScore as Lang.Number or Null;
+
     function onUpdate(dc as Dc) as Void {
+
+        // Get the stress score from the ActivityMonitor, unsure of the correct syntax here
+        View.findDrawableById("stressReading").setText(stressScore);
+
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
     }

@@ -18,6 +18,7 @@ class WhimsWearableApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as [Views] or [Views, InputDelegates] {
+        // utlizes mvc patterm, App is the controller, View is the view, and Delegate is the model
         return [ new WhimsWearableView(), new WhimsWearableDelegate() ];
     }
 

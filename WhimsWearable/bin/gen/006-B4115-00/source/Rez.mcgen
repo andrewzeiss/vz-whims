@@ -12,14 +12,14 @@ module Rez {
 
     module Layouts {
         function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_text_6655506015 = new WatchUi.Text({:color=>Graphics.COLOR_WHITE, :locX=>(320 * 0.5), :locY=>5, :text=>$.Rez.Strings.prompt, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_MEDIUM});
+            var rez_cmp_local_text_8565117861 = new WatchUi.Text({:color=>Graphics.COLOR_WHITE, :locX=>(320 * 0.5), :locY=>75, :text=>$.Rez.Strings.stressLabel, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SMALL});
 
-            var rez_cmp_local_text_2915065491 = new WatchUi.Text({:color=>Graphics.COLOR_WHITE, :locX=>(320 * 0.5), :locY=>70, :text=>$.Rez.Strings.instructions, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_TINY});
+            var rez_cmp_local_text_4570911849 = new WatchUi.Text({:color=>Graphics.COLOR_WHITE, :locX=>(320 * 0.5), :locY=>150, :text=>$.Rez.Strings.stressReading, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SMALL});
 
-            var rez_cmp_local_bitmap_id_chrome = new WatchUi.Bitmap({:identifier=>"id_chrome", :rezId=>$.Rez.Drawables.id_chrome, :locX=>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_CENTER});
-            rez_cmp_local_bitmap_id_chrome.setLocation(((320 - rez_cmp_local_bitmap_id_chrome.width) * 0.5), ((360 - rez_cmp_local_bitmap_id_chrome.height) * 0.5));
+            var rez_cmp_local_bitmap_id_chrome = new WatchUi.Bitmap({:identifier=>"id_chrome", :rezId=>$.Rez.Drawables.id_chrome, :locX=>WatchUi.LAYOUT_HALIGN_CENTER, :locY=>WatchUi.LAYOUT_VALIGN_BOTTOM});
+            rez_cmp_local_bitmap_id_chrome.setLocation(((320 - rez_cmp_local_bitmap_id_chrome.width) * 0.5), rez_cmp_local_bitmap_id_chrome.locY);
 
-            return [rez_cmp_local_text_6655506015, rez_cmp_local_text_2915065491, rez_cmp_local_bitmap_id_chrome] as Array<WatchUi.Drawable>;
+            return [rez_cmp_local_text_8565117861, rez_cmp_local_text_4570911849, rez_cmp_local_bitmap_id_chrome] as Array<WatchUi.Drawable>;
         }
     } // Layouts
 
@@ -35,8 +35,10 @@ module Rez {
 
     module Strings {
         (:initialized) var instructions as ResourceId;
+        (:initialized) var stressReading as ResourceId;
         (:initialized) var menu_label_1 as ResourceId;
         (:initialized) var menu_label_2 as ResourceId;
+        (:initialized) var stressLabel as ResourceId;
         (:initialized) var prompt as ResourceId;
         (:initialized) var AppName as ResourceId;
     } // Strings

@@ -2,43 +2,65 @@
 import Toybox.Lang;
 [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 2; ]
 import Toybox.WatchUi;
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 3; ]
+import Toybox.System;
 [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 4; ]
+import Toybox.BluetoothLowEnergy;
+[ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 6; ]
 class WhimsWearableDelegate extends WatchUi.BehaviorDelegate{
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 4; ]
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 6; ]
     <init> {
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" 8 8 ]
+        %tmp.2 = 1;
+        %tmp.1 = newa %tmp.2;
+        putv self :onSignal %tmp.1;
     }
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 4; ]
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 6; ]
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 8; @position = 8; ]
+    var onSignal;
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 10; ]
     function initialize() as Void {
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_6_26_8_4_start:
-[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" 7 8 ]
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_10_26_12_4_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" 11 8 ]
         %tmp.2 = getv ? :BehaviorDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_6_26_8_4_stop:
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_10_26_12_4_stop:
     }
-    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 10; ]
-    function onMenu() as Boolean {
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_10_33_13_4_start:
-[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" 11 8 ]
-        %tmp.1 = getm $.Toybox.WatchUi;
-        %tmp.2 = getv function %tmp.1 :pushView;
-        %tmp.6 = getv ? :Rez;
-        %tmp.7 = getv %tmp.6 :Menus;
-        %tmp.8 = getv function ? %tmp.7 :MainMenu;
-        %tmp.3 = newc %tmp.8 ();
-        %tmp.12 = getv ? :WhimsWearableMenuDelegate;
-        %tmp.9 = newc %tmp.12 ();
-        %tmp.13 = getm $.Toybox.WatchUi;
-        %tmp.14 = getv %tmp.13 :SLIDE_UP;
-        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9, %tmp.14);
-[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" 12 8 ]
-        %tmp.15 = true;
-        ret %tmp.15;
-_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_10_33_13_4_stop:
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 14; ]
+    function onKey(key) {
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_14_24_26_4_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" 16 8 ]
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_16_8_24_8_if_stmt:
+        %tmp.1 = lgetv %key;
+        %tmp.2 = getv function %tmp.1 :getKey;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 4;
+        %tmp.5 = eq %tmp.3 %tmp.4;
+        bf %tmp.5 @_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_16_8_24_8_if_end;
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_16_8_24_8_if_true:
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_16_31_24_8_start:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" 18 12 ]
+        %tmp.6 = getm $.Toybox.System;
+        %tmp.7 = getv function %tmp.6 :println;
+        %tmp.8 = "Connecting to Arduino...";
+        invoke %tmp.6 %tmp.7(%tmp.8);
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" 23 12 ]
+        %tmp.9 = true;
+        ret %tmp.9;
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_16_31_24_8_stop:
+        goto @_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_16_8_24_8_if_end;
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_16_8_24_8_if_end:
+[ "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc" 25 8 ]
+        %tmp.10 = false;
+        ret %tmp.10;
+_Users_andrewzeiss_Documents_CMU_Internship_whims_dir_WhimsWearable_source_WhimsWearableDelegate_mc_14_24_26_4_stop:
+    }
+    [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 29; ]
+    function onThreshold() {
     }
 }
 [ @file = "/Users/andrewzeiss/Documents/CMU/Internship/whims-dir/WhimsWearable/source/WhimsWearableDelegate.mc"; @line = 1; ]
